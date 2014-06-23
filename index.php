@@ -170,7 +170,7 @@ function outAjax($file)
 if (!isset($_GET['ajax']))
 {       
 	listFiles(DIRPATH);
-	require_once('template.php');
+	require('template.php');
 }
 else
 {

@@ -76,7 +76,7 @@ $(document).ready(function()
 {
 	$('#ennyibol').html(fileList.length);
 	
-	if (confirm('I\\\'m going to send '+Math.round(fileList.length/5)+' queries to the server. Do you want to continue?'))
+	if (confirm('I\'m going to send '+Math.round(fileList.length/5)+' queries to the server. Do you want to continue?'))
 	{
 		getErrors();
 	}
