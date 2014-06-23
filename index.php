@@ -128,7 +128,7 @@ function writeProblem($file,$error)
 function listFiles($directory)
 {
 	
-	if (realpath($directory)== str_replace('index.php','',$_SERVER['SCRIPT_FILENAME']))
+	if (realpath($directory)== str_replace('/index.php','',$_SERVER['SCRIPT_FILENAME']))
 		return ;
 
 	if(is_dir($directory))
