@@ -1,6 +1,7 @@
+<!DOCTYPE html>
 <html>
 	<head>
-		<title>PHP 5.3 and 5.4 deprecated function scanner</title>
+		<title>PHP deprecated function scanner</title>
 		<meta http-equiv='Content-Type' content='Type=text/html; charset=utf-8'>
 		<script src="js/jquery.js"></script>
 		<?php
@@ -22,7 +23,19 @@
 		<link rel='stylesheet' type='text/css' href='css/style.css'>		
 	</head>
 	<body>
-		<h1>PHP 5.3 & 5.4 Deprecated Scanner</h1>
+		<h1>PHP Deprecated Function Scanner</h1>
+		
+		<p>
+			This script will only find deprecated <em>functions</em> in your code.  For more detailed information about migrating to newer 
+			versions of PHP, see the following links:
+		</p>
+		
+		<ul>
+			<li><a href="http://us3.php.net/manual/en/migration53.php" target="_blank">Migrating from PHP 5.2.x to PHP 5.3.x</a></li>
+			<li><a href="http://www.php.net/manual/en/migration54.php" target="_blank">Migrating from PHP 5.3.x to PHP 5.4.x</a></li>
+			<li><a href="http://www.php.net/manual/en/migration55.php" target="_blank">Migrating from PHP 5.4.x to PHP 5.5.x</a></li>
+		</ul>
+		
 		<div id="ellenorzes">
 			Checked: <span id="ittjar"></span>/<span id="ennyibol"></span> file
 		</div>
