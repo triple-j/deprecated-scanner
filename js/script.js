@@ -74,16 +74,22 @@ function progressBar(ittjar)
  */ 
 $(document).ready(function()
 {
-	$('#ennyibol').html(fileList.length);
+	$('#ellenorzes, #progressbar_corner').hide();
 	
-	if (confirm('I\'m going to send '+Math.round(fileList.length/5)+' queries to the server. Do you want to continue?'))
-	{
-		getErrors();
-	}
-	else
-	{
-		$('html').html('Aborted!');
-	}
+	$('#ennyibol, .file_count').html(fileList.length);
+	
+	$('#scan').on('click', function(){
+		if (confirm('This script will send '+Math.round(fileList.length/5)+' queries to the server. Do you want to continue?'))
+		{
+			$('#scan').hide();
+			$('#ellenorzes, #progressbar_corner').show();
+			getErrors();
+		}
+		else
+		{
+			$('html').html('Aborted!');
+		}
+	});
 	
 	
 	$('.item').live('click',function(){

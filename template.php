@@ -36,8 +36,12 @@
 			<li><a href="http://www.php.net/manual/en/migration55.php" target="_blank">Migrating from PHP 5.4.x to PHP 5.5.x</a></li>
 		</ul>
 		
+		<div class="actions">
+			<button id="scan">Start Scan (<span class="file_count">0</span> files)</button>
+		</div>
+		
 		<div id="ellenorzes">
-			Checked: <span id="ittjar"></span>/<span id="ennyibol"></span> file
+			Checked: <span id="ittjar">0</span>/<span id="ennyibol">0</span> files
 		</div>
 		<div id="progressbar_corner">
 			<div id="progressbar"></div>
