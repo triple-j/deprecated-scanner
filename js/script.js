@@ -74,7 +74,7 @@ function progressBar(ittjar)
  */ 
 $(document).ready(function()
 {
-	$('#ellenorzes, #progressbar_corner').hide();
+	$('#ellenorzes, #progressbar_corner, .output').hide();
 	
 	$('#ennyibol, .file_count').html(fileList.length);
 	
@@ -82,7 +82,7 @@ $(document).ready(function()
 		if (confirm('This script will send '+Math.ceil(fileList.length/5)+' queries to the server. Do you want to continue?'))
 		{
 			$('#scan').hide();
-			$('#ellenorzes, #progressbar_corner').show();
+			$('#ellenorzes, #progressbar_corner, .output').show();
 			getErrors();
 		}
 		else
@@ -91,8 +91,15 @@ $(document).ready(function()
 		}
 	});
 	
+	$('#list').on('click','.item',function(){
+		$(this).next('.infos').toggle();
+	});
 	
-	$('.item').live('click',function(){
+	$('#list').on('click','.errorInfo',function(){
+		$(this).next('pre').toggle();
+	});
+	
+	$('#toggle_files').on('click',function(){
 		if (files==true) 
 		{ 
 			files = false; $('.infos').hide(); 
@@ -103,7 +110,7 @@ $(document).ready(function()
 		}
 	});
 	
-	$('.errorInfo').live('click',function(){
+	$('#toggle_infos').on('click',function(){
 		if (infos==true) 
 		{ 
 			infos = false; $('pre').hide(); 

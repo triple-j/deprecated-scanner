@@ -39,6 +39,8 @@ body
 {
 	background-color: #999; 
 	font-weight: bold; 
+	margin-top: 3px;
+	margin-bottom: 3px;
 	padding: 10px; 
 	font-size: 15px; 
 	cursor: pointer;
@@ -65,5 +67,9 @@ pre
 	padding-bottom: 10px;
 }
 
-
+.actions.output
+{
+	margin-top: 3px;
+	margin-bottom: 20px;
+}
 

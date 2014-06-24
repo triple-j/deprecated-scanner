@@ -50,6 +50,12 @@
 			
 		</div>
 		
+		
+		<div class="actions output">
+			<button id="toggle_files"><span>Minimize/Show</span> all File information</button>
+			<button id="toggle_infos"><span>Minimize/Show</span> all Line information</button>
+		</div>
+		
 		<div id="list"></div>
 	</body>
 </html>
