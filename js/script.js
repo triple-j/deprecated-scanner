@@ -79,7 +79,7 @@ $(document).ready(function()
 	$('#ennyibol, .file_count').html(fileList.length);
 	
 	$('#scan').on('click', function(){
-		if (confirm('This script will send '+Math.round(fileList.length/5)+' queries to the server. Do you want to continue?'))
+		if (confirm('This script will send '+Math.ceil(fileList.length/5)+' queries to the server. Do you want to continue?'))
 		{
 			$('#scan').hide();
 			$('#ellenorzes, #progressbar_corner').show();
