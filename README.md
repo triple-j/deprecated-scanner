@@ -1,7 +1,6 @@
 Author: WebSlide Studio
 Site: http://www.webslide.hu
-Date: 2012-11-05
-Version: 0.1a
+Version: 0.2
 
 Open source project
 
@@ -27,6 +26,10 @@ v0.1:
 - Find deprecated functions.
 - You can hide source codes and error messages.
 - This script won't check itself.
+
+v0.2:
+- Find PHP 5.5 deprecated functions.
+- Hide individual source codes and error messages.
 
 
 Please use this script on your localhost for a better experience!

@@ -1,8 +1,7 @@
 /*********************************
  * @Author  WebSlide Studio
  * @Site    http://www.webslide.hu 
- * @Date    2012-11-05
- * @Version 0.1a
+ * @Version 0.2
  *  
  * Open source project
  ********************************/
