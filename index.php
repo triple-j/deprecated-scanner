@@ -76,7 +76,7 @@ function readFileCheck($file)
 					
 					foreach ($functions AS $key => $value)
 					{
-						$check = preg_replace('/([\s]+|[^a-zA-Z_])'.$value.'[\s]*\(/',"<span style=\"color: #FF99FF; background-color: #666;\">$0</span>",$buffer);
+						$check = preg_replace('/([\s]+|[^a-zA-Z_])'.$value.'[\s]*\(/',"[~DEPRECATED~]$0[~/DEPRECATED~]",$buffer);
 						if ($check!=$buffer)
 						{
 							$save = $originalbuffer[$i];
@@ -110,7 +110,10 @@ function writeProblem($file,$error)
 		$i = 2;
 		foreach ($value[1] AS $kk => $kvalue)
 		{
-			echo '<tr><td valign="top" style="background-color: #999;">'.($key-$i).'</td><td valign="top">'.$kvalue.'</td></tr>';
+			$display_code = htmlentities($kvalue,ENT_QUOTES|ENT_HTML401,"UTF-8");
+			$display_code = str_replace("[~DEPRECATED~]","<span style=\"color: #FF99FF; background-color: #666;\">",$display_code);
+			$display_code = str_replace("[~/DEPRECATED~]","</span>",$display_code);
+			echo '<tr><td valign="top" style="background-color: #999;">'.($key-$i).'</td><td valign="top">'.$display_code.'</td></tr>';
 			$i--;
 		}
 		echo '</table>';
