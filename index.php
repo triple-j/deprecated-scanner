@@ -27,12 +27,9 @@ function buildErrorArray()
 	$i = 0;
 	foreach ($deprecated_functions AS $key => $value)
 	{
-		$functions[$i] = $key.'(';
+		$functions[$i] = $key;
 		$functions_error[$i] = $value;
 		$i++;
-		$functions[$i] = $key.' (';
-		$functions_error[$i] = $value;
-		$i++; 
 	}
 }	
 
@@ -79,7 +76,7 @@ function readFileCheck($file)
 					
 					foreach ($functions AS $key => $value)
 					{
-						$check = preg_replace('/[\s]+'.$value.'[\s]*\()/',"<span style=\"color: #FF99FF; background-color: #666;\">$0</span>",$buffer);
+						$check = preg_replace('/([\s]+|[^a-zA-Z_])'.$value.'[\s]*\(/',"<span style=\"color: #FF99FF; background-color: #666;\">$0</span>",$buffer);
 						if ($check!=$buffer)
 						{
 							$save = $originalbuffer[$i];
